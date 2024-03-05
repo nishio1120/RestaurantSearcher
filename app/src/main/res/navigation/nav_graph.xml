@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputKeyWordFragment">
+    <fragment
+        android:id="@+id/inputKeyWordFragment"
+        android:name="com.example.restaurantsearcher.ui.fragment.InputKeyWordFragment"
+        android:label="InputKeyWordFragment" >
+        <action
+            android:id="@+id/action_inputKeyWordFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.restaurantsearcher.ui.fragment.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <argument
+            android:name="inputText"
+            app:argType="string" />
+
+        <argument
+            android:name="range"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_searchFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/inputKeyWordFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.restaurantsearcher.ui.fragment.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="searchTerms"
+            app:argType="com.example.restaurantsearcher.data.SearchTerms" />
+        <action
+            android:id="@+id/action_resultFragment_to_restaurantScreenFragment"
+            app:destination="@id/restaurantScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantScreenFragment"
+        android:name="com.example.restaurantsearcher.ui.fragment.RestaurantScreenFragment"
+        android:label="fragment_restaurant_screen"
+        tools:layout="@layout/fragment_restaurant_screen">
+    <argument
+        android:name="restaurantName"
+        app:argType="string" />
+    <argument
+        android:name="restaurantData"
+        app:argType="com.example.restaurantsearcher.data.HotPepperData" />
+    </fragment>
+</navigation>

@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">RestaurantSearcher</string>
+    <string name="home">ホーム</string>
+
+    <string name="search_location">現在地取得</string>
+    <string name="search_input_hint">ジャンルや店舗名で絞り込む</string>
+    <string name="select_range_explanation">検索半径を選択して検索</string>
+    <string-array name="range_array">
+        <item>300m</item>
+        <item>500m</item>
+        <item>1000m</item>
+        <item>2000m</item>
+        <item>3000m</item>
+    </string-array>
+    <string name="retry">リトライ</string>
+    <string name="location_permission_required_title">位置情報パーミッションが必要です</string>
+    <string name="location_permission_required_message">このアプリでは、位置情報を取得するために位置情報パーミッションが必要です</string>
+    <string name="location_error_message">位置情報を取得できませんでした</string>
+    <string name="location_permission_denied_message">位置情報が許可されていません</string>
+    <string name="ok_button">OK</string>
+    <string name="hot_pepper_url">https://webservice.recruit.co.jp/hotpepper/</string>
+
+    <string name="search_result">検索結果</string>
+    <string name="network_error_message">ネットワークエラーが発生しました</string>
+    <string name="empty_result_message">検索結果がありませんでした</string>
+    <string name="genre">ジャンル</string>
+    <string name="budget">予算</string>
+    <string name="closed_days">休業日</string>
+    <string name="opening_hours">営業時間</string>
+    <string name="address">住所</string>
+    <string name="access">アクセス</string>
+    <string name="open_map">Mapを開く</string>
+    <string name="hot_pepper">HotPepperへ</string>
 </resources>
