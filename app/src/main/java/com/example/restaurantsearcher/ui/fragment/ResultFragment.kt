@@ -12,12 +12,13 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.restaurantsearcher.R
 import com.example.restaurantsearcher.databinding.FragmentResultBinding
-import com.example.restaurantsearcher.ui.adapter.RestaurantListAdapter
+import com.example.restaurantsearcher.adapter.RestaurantListAdapter
 import com.example.restaurantsearcher.data.HotPepperData
 import com.example.restaurantsearcher.data.SearchState
 import com.example.restaurantsearcher.ui.viewmodel.ResultViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+//検索結果画面
 @AndroidEntryPoint
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
@@ -55,6 +56,7 @@ class ResultFragment : Fragment() {
     }
 
     private fun observeSearchState() {
+        //SearchStateの変化を監視
         viewModel.searchState.observe(viewLifecycleOwner) {
             switchSearchState(it)
         }

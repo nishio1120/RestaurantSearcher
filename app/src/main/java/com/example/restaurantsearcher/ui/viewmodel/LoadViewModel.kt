@@ -9,7 +9,7 @@ import com.example.restaurantsearcher.data.LocationData
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.location.LocationServices
 
-class SearchViewModel : ViewModel() {
+class LoadViewModel : ViewModel() {
     private val _locationData = MutableLiveData<LocationData>()
     val locationData: LiveData<LocationData> get() = _locationData
 
@@ -19,7 +19,9 @@ class SearchViewModel : ViewModel() {
 
     fun getLocation(context: Context) {
         try {
+            // 最後に確認された位置情報を取得
             val fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
+            // 位置情報を取得したらListenerが反応する
             fusedLocationClient.lastLocation.addOnCompleteListener(locationCompleteListener)
         } catch (e: SecurityException) {
             handleLocationError()
@@ -38,6 +40,7 @@ class SearchViewModel : ViewModel() {
         }
     }
 
+    //座標の取得
     private fun handleLocationSuccess(location: Location) {
         val locationData = LocationData(location.latitude, location.longitude)
         _locationData.value = locationData

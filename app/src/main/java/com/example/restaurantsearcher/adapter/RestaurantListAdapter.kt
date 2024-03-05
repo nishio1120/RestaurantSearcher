@@ -1,4 +1,4 @@
-package com.example.restaurantsearcher.ui.adapter
+package com.example.restaurantsearcher.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.restaurantsearcher.databinding.ItemResultBinding
 import com.example.restaurantsearcher.data.HotPepperData
-import com.example.restaurantsearcher.ui.viewholder.RestaurantListViewHolder
+import com.example.restaurantsearcher.viewholder.RestaurantListViewHolder
 
+//HotPepperDataのデータ管理を行う
 class RestaurantListAdapter(private val onRestaurantItemClick: (HotPepperData) -> Unit) :
     ListAdapter<HotPepperData, RestaurantListViewHolder>(restaurantDataDiffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantListViewHolder {

@@ -1,5 +1,6 @@
 package com.example.restaurantsearcher.ui.model
 
+import com.example.restaurantsearcher.data.HotPepperResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

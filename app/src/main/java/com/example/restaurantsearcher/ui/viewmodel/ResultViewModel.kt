@@ -5,10 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
 import androidx.lifecycle.viewModelScope
-import com.example.restaurantsearcher.data.HotPepperRepository
+import com.example.restaurantsearcher.repository.HotPepperRepository
 import com.example.restaurantsearcher.data.HotPepperData
-import com.example.restaurantsearcher.ui.model.HotPepperResponse
-import com.example.restaurantsearcher.ui.model.Results
+import com.example.restaurantsearcher.data.HotPepperResponse
+import com.example.restaurantsearcher.data.Results
 import com.example.restaurantsearcher.data.SearchState
 import com.example.restaurantsearcher.data.SearchTerms
 import dagger.hilt.android.lifecycle.HiltViewModel

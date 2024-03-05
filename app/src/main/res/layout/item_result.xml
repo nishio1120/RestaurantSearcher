@@ -51,7 +51,7 @@
                 android:text="@{restaurant.name}"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:text="丸亀製麺 あべのキューズモール店" />
+                tools:text="店舗名" />
 
             <TextView
                 android:id="@+id/area"
@@ -63,7 +63,7 @@
                 android:text='@{restaurant.smallArea.name +"[" +restaurant.largeArea.name +"]"}'
                 android:textSize="15sp"
                 app:drawableStartCompat="@drawable/ic_location"
-                tools:text="天王寺[大阪]" />
+                tools:text="エリア" />
 
             <TextView
                 android:id="@+id/genre"
@@ -75,7 +75,7 @@
                 android:text='@{restaurant.genre.name}'
                 android:textSize="15sp"
                 app:drawableStartCompat="@drawable/ic_restaurant"
-                tools:text="和食" />
+                tools:text="ジャンル" />
 
             <TextView
                 android:id="@+id/budget"
@@ -87,7 +87,7 @@
                 android:text='@{restaurant.budget.name}'
                 android:textSize="15sp"
                 app:drawableStartCompat="@drawable/ic_yen"
-                tools:text="1501～2000円" />
+                tools:text="予算" />
 
             <TextView
                 android:id="@+id/access"
@@ -99,7 +99,7 @@
                 android:text='@{restaurant.access}'
                 android:textSize="15sp"
                 app:drawableStartCompat="@drawable/ic_walk"
-                tools:text="天王寺駅12号出口より直結｡あべのｷｭｰｽﾞﾓｰﾙ3F" />
+                tools:text="アクセス" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </layout>
