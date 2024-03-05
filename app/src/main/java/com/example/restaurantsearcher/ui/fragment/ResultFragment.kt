@@ -1,6 +1,7 @@
 package com.example.restaurantsearcher.ui.fragment
 
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,6 +46,7 @@ class ResultFragment : Fragment() {
         _binding = FragmentResultBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.credit.movementMethod = LinkMovementMethod.getInstance()
         return binding.root
     }
 

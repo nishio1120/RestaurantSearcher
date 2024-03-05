@@ -2,6 +2,7 @@ package com.example.restaurantsearcher.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,7 @@ class RestaurantScreenFragment : Fragment() {
     ): View {
         _binding = FragmentRestaurantScreenBinding.inflate(inflater, container, false)
         binding.restaurant = args.restaurantData
-
+        binding.credit.movementMethod = LinkMovementMethod.getInstance()
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
         viewModel.url.observe(viewLifecycleOwner) {
@@ -39,5 +40,4 @@ class RestaurantScreenFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

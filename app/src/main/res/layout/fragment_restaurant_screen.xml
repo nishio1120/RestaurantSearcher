@@ -194,25 +194,21 @@
                     android:layout_alignStart="@+id/open"
                     android:layout_alignEnd="@+id/genre"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="145dp"
                     android:text="@{restaurant.close}"
                     android:textSize="18sp"
                     tools:text="休業日" />
 
-
                 <TextView
-                    android:id="@+id/tel"
+                    android:id="@+id/credit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/close"
-                    android:layout_alignStart="@+id/close"
                     android:layout_alignEnd="@+id/genre"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginBottom="60dp"
-                    android:text="@{restaurant.catch}"
-                    android:textSize="18sp"
-                    tools:text="電話番号" />
+                    android:layout_marginTop="142dp"
+                    android:layout_marginEnd="-7dp"
+                    android:text="@string/credit" />
+
 
             </RelativeLayout>
         </ScrollView>
@@ -224,8 +220,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="188dp"
+            android:layout_marginBottom="51dp"
             android:onClickListener="@{() -> viewModel.openUrl(restaurant.url.pc)}"
             android:text="@string/hot_pepper"
             android:textSize="18sp"
@@ -236,5 +232,6 @@
             app:iconSize="30dp"
             app:strokeColor="@color/grey"
             app:strokeWidth="1dp" />
+
     </RelativeLayout>
 </layout>

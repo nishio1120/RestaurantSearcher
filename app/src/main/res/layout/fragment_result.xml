@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
+    <data android:layout_height="wrap_content">
 
         <variable
             name="inputText"
@@ -34,11 +34,11 @@
             android:layout_below="@+id/errorTextView"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:theme="@style/Theme.MaterialComponents.DayNight"
             android:onClickListener="@{() -> viewModel.retrySearch()}"
             android:text="@string/retry"
-            android:textSize="15sp"
             android:textColor="@color/black"
+            android:textSize="15sp"
+            android:theme="@style/Theme.MaterialComponents.DayNight"
             android:visibility="invisible" />
 
         <ProgressBar
@@ -53,10 +53,19 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/resultListRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="706dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
             tools:itemCount="7"
             tools:listitem="@layout/item_result" />
+
+        <TextView
+            android:id="@+id/credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resultListRecyclerView"
+            android:layout_alignParentEnd="true"
+            android:text="@string/credit" />
+
     </RelativeLayout>
 </layout>

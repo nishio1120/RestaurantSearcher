@@ -32,4 +32,5 @@
     <string name="access">アクセス</string>
     <string name="open_map">Mapを開く</string>
     <string name="hot_pepper">HotPepperへ</string>
+    <string name="credit">Powered by <a href="http://webservice.recruit.co.jp/">ホットペッパーグルメ Webサービス</a></string>
 </resources>
