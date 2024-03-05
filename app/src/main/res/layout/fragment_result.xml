@@ -37,6 +37,8 @@
             android:theme="@style/Theme.MaterialComponents.DayNight"
             android:onClickListener="@{() -> viewModel.retrySearch()}"
             android:text="@string/retry"
+            android:textSize="15sp"
+            android:textColor="@color/black"
             android:visibility="invisible" />
 
         <ProgressBar

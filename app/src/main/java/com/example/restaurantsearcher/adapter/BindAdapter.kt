@@ -1,4 +1,4 @@
-package com.example.restaurantsearcher.ui.adapter
+package com.example.restaurantsearcher.adapter
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

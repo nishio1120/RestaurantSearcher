@@ -1,4 +1,4 @@
-package com.example.restaurantsearcher.ui.viewholder
+package com.example.restaurantsearcher.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.restaurantsearcher.databinding.ItemRangeBinding

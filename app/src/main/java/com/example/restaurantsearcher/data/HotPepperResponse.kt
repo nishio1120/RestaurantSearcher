@@ -1,7 +1,6 @@
-package com.example.restaurantsearcher.ui.model
+package com.example.restaurantsearcher.data
 
 import android.os.Parcelable
-import com.example.restaurantsearcher.data.HotPepperData
 import com.squareup.moshi.Json
 import kotlinx.parcelize.Parcelize
 
@@ -16,3 +15,4 @@ data class Results(
     @Json(name = "shop")
     val shops: List<HotPepperData>
 ) : Parcelable
+

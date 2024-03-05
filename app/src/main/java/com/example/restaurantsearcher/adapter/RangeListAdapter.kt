@@ -1,16 +1,17 @@
-package com.example.restaurantsearcher.ui.adapter
+package com.example.restaurantsearcher.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.restaurantsearcher.databinding.ItemRangeBinding
-import com.example.restaurantsearcher.ui.viewholder.RangeListViewHolder
+import com.example.restaurantsearcher.viewholder.RangeListViewHolder
 
+//検索距離のデータの管理を行う
 class RangeListAdapter(private val listener: OnRangeItemClickListener) :
     ListAdapter<String, RangeListViewHolder>(rangeListDiffCallback) {
     private companion object {
-        //更新されたデータを判定するためのDiffUtil
+
         private val rangeListDiffCallback = object : DiffUtil.ItemCallback<String>() {
             override fun areItemsTheSame(
                 oldText: String,
@@ -25,7 +26,6 @@ class RangeListAdapter(private val listener: OnRangeItemClickListener) :
     }
 
     interface OnRangeItemClickListener {
-        //RangeListをクリックした時の処理
         fun onRangeItemClick(range: Int)
     }
 
@@ -42,7 +42,6 @@ class RangeListAdapter(private val listener: OnRangeItemClickListener) :
         val item = getItem(position)
         holder.bind(item)
         holder.itemView.setOnClickListener {
-            //positionに1を足してAPIの値と合わせる
             listener.onRangeItemClick(position + 1)
         }
     }

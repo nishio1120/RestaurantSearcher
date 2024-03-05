@@ -12,6 +12,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.restaurantsearcher.databinding.FragmentRestaurantScreenBinding
 import com.example.restaurantsearcher.ui.viewmodel.RestaurantScreenViewModel
 
+//店舗詳細画面
 class RestaurantScreenFragment : Fragment() {
     private var _binding: FragmentRestaurantScreenBinding? = null
     private val binding get() = _binding!!

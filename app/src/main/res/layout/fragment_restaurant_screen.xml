@@ -60,7 +60,7 @@
                     android:layout_toEndOf="@+id/genreTitle"
                     android:text="@{restaurant.genre.name}"
                     android:textSize="18sp"
-                    tools:text="和食" />
+                    tools:text="ジャンル" />
 
                 <TextView
                     android:id="@+id/addressTitle"
@@ -84,11 +84,10 @@
                     android:layout_toStartOf="@+id/mapButton"
                     android:text="@{restaurant.address}"
                     android:textSize="18sp"
-                    tools:text="大阪府大阪市中央区心斎橋筋２－６－１８　心斎橋早川ビルＢ１" />
+                    tools:text="住所" />
 
                 <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                     android:id="@+id/mapButton"
-                    android:theme="@style/Theme.MaterialComponents.DayNight"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -96,10 +95,12 @@
                     android:layout_alignEnd="@+id/genre"
                     android:layout_marginTop="10dp"
                     android:contentDescription="@string/open_map"
+                    android:text="@string/open_map"
+                    android:textColor="@color/black"
+                    android:theme="@style/Theme.MaterialComponents.DayNight"
                     android:onClickListener="@{() -> viewModel.openMap(restaurant.address)}"
                     android:strokeColor="@color/black"
-                    app:icon="@drawable/ic_gps"
-                    app:iconSize="30dp"
+                    app:backgroundTint="#84C98B"
                     app:strokeColor="@color/grey"
                     app:strokeWidth="1dp" />
 
@@ -124,7 +125,7 @@
                     android:layout_marginTop="15dp"
                     android:text="@{restaurant.access}"
                     android:textSize="18sp"
-                    tools:text="南海難波(南海)駅東出口より徒歩約5分/大阪メトロ御堂筋線なんば(大阪メトロ)駅３出口より徒歩約10分" />
+                    tools:text="アクセス" />
 
                 <TextView
                     android:id="@+id/budgetTitle"
@@ -149,7 +150,7 @@
                     android:layout_marginEnd="0dp"
                     android:text="@{restaurant.budget.name}"
                     android:textSize="18sp"
-                    tools:text="4001000～50000000円" />
+                    tools:text="予算" />
 
                 <TextView
                     android:id="@+id/openTitle"
@@ -172,7 +173,7 @@
                     android:layout_marginTop="10dp"
                     android:text="@{restaurant.open}"
                     android:textSize="18sp"
-                    tools:text="月～金: 17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）土: 12:00～14:30 （料理L.O. 14:00 ドリンクL.O. 14:00）17:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:30）日: 12:00～14:30 （料理L.O. 14:00 ドリンクL.O. 14:00）17:00～23:00 （料理L.O. 22:00 ドリンクL.O. 22:30）祝日: 17:00～23:00 （料理L.O. 22:00 ドリンクL.O. 22:30）祝前日: 17:00～翌0:00 （料理L.O. 23:30 ドリンクL.O. 23:30）" />
+                    tools:text="営業時間" />
 
                 <TextView
                     android:id="@+id/closeTitle"
@@ -193,16 +194,31 @@
                     android:layout_alignStart="@+id/open"
                     android:layout_alignEnd="@+id/genre"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="60dp"
                     android:text="@{restaurant.close}"
                     android:textSize="18sp"
-                    tools:text="年に一回ほどスタッフ研修の為定休日がございます。毎年大晦日と元旦はお休みいただいております。" />
+                    tools:text="休業日" />
+
+
+                <TextView
+                    android:id="@+id/tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/close"
+                    android:layout_alignStart="@+id/close"
+                    android:layout_alignEnd="@+id/genre"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="60dp"
+                    android:text="@{restaurant.catch}"
+                    android:textSize="18sp"
+                    tools:text="電話番号" />
+
             </RelativeLayout>
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/url"
-            android:theme="@style/Theme.MaterialComponents.DayNight"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -213,6 +229,8 @@
             android:onClickListener="@{() -> viewModel.openUrl(restaurant.url.pc)}"
             android:text="@string/hot_pepper"
             android:textSize="18sp"
+            android:theme="@style/Theme.MaterialComponents.DayNight"
+            app:backgroundTint="@color/red"
             app:icon="@drawable/ic_food"
             app:iconGravity="textStart"
             app:iconSize="30dp"

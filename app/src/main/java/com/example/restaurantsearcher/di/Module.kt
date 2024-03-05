@@ -15,6 +15,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
+//複数のバインディングの定義をグループ化する
 @Module
 @InstallIn(SingletonComponent::class)
 class Module {

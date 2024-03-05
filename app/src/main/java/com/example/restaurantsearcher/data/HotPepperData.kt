@@ -36,7 +36,8 @@ data class HotPepperData(
     val open: String,
     @Json(name = "close")
     val close: String,
-
+    @Json(name = "catch")
+    val catch: String
     ) : Parcelable
 
 @Parcelize

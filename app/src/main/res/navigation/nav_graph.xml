@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/inputKeyWordFragment">
+    app:startDestination="@id/SearchFragment">
     <fragment
-        android:id="@+id/inputKeyWordFragment"
-        android:name="com.example.restaurantsearcher.ui.fragment.InputKeyWordFragment"
-        android:label="InputKeyWordFragment" >
+        android:id="@+id/SearchFragment"
+        android:name="com.example.restaurantsearcher.ui.fragment.SearchFragment"
+        android:label="@string/home" >
         <action
-            android:id="@+id/action_inputKeyWordFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            android:id="@+id/action_SearchFragment_to_loadFragment"
+            app:destination="@id/loadFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.example.restaurantsearcher.ui.fragment.SearchFragment"
-        android:label="SearchFragment"
-        tools:layout="@layout/fragment_search">
+        android:id="@+id/loadFragment"
+        android:name="com.example.restaurantsearcher.ui.fragment.LoadFragment"
+        android:label="LoadFragment"
+        tools:layout="@layout/fragment_load">
         <argument
             android:name="inputText"
             app:argType="string" />
@@ -26,15 +26,15 @@
             android:name="range"
             app:argType="integer" />
         <action
-            android:id="@+id/action_searchFragment_to_resultFragment"
+            android:id="@+id/action_loadFragment_to_resultFragment"
             app:destination="@id/resultFragment"
-            app:popUpTo="@id/inputKeyWordFragment"/>
+            app:popUpTo="@id/SearchFragment"/>
     </fragment>
 
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.restaurantsearcher.ui.fragment.ResultFragment"
-        android:label="ResultFragment"
+        android:label="@string/search_result"
         tools:layout="@layout/fragment_result">
         <argument
             android:name="searchTerms"
@@ -47,7 +47,7 @@
     <fragment
         android:id="@+id/restaurantScreenFragment"
         android:name="com.example.restaurantsearcher.ui.fragment.RestaurantScreenFragment"
-        android:label="fragment_restaurant_screen"
+        android:label="@string/restaurant_Screen"
         tools:layout="@layout/fragment_restaurant_screen">
     <argument
         android:name="restaurantName"

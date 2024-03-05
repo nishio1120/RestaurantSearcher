@@ -21,6 +21,6 @@
         android:layout_below="@+id/toolbar"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"
-        tools:layout="@layout/fragment_input_key_word" />
+        tools:layout="@layout/fragment_search" />
 
 </RelativeLayout>
